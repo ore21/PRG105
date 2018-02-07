@@ -1,47 +1,48 @@
 """Roman Numerals"""
 
-number = int(input("number"))
+number = int(input(" Enter a number between the range of 1 through 10? "))
+print(" Roman numeral ")
 
 if number == 1:
 
-    print("I")
+    print(" I ")
 
 elif number == 2:
 
-    print("II")
+    print(" II ")
 
 elif number == 3:
 
-    print("III")
+    print(" III ")
 
 elif number == 4:
 
-    print("IV")
+    print(" IV ")
 
 elif number == 5:
 
-    print("V")
+    print(" V ")
 
 elif number == 6:
 
-    print("VI")
+    print(" VI ")
 
 elif number == 7:
 
-    print("VII")
+    print(" VII ")
 
 elif number == 8:
 
-    print("VIII")
+    print(" VIII ")
 
 elif number == 9:
 
-    print("IX")
+    print(" IX ")
 
 elif number == 10:
 
-    print("X")
+    print(" X ")
 
 else:
 
-    print("error")
+    print(" error ")
