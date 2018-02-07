@@ -1,41 +1,45 @@
-num = int(input("num"))
+"""Roman Numerals"""
 
-if num == 1:
+number = int(input("number"))
+
+if number == 1:
 
     print("I")
 
-elif num == 2:
+elif number == 2:
 
     print("II")
 
-elif num == 3:
+elif number == 3:
 
     print("III")
 
-elif num == 4:
+elif number == 4:
 
     print("IV")
 
-elif num == 5:
+elif number == 5:
 
     print("V")
 
-
-elif num == 6:
+elif number == 6:
 
     print("VI")
 
-elif num == 7:
+elif number == 7:
 
     print("VII")
 
-elif num == 8:
+elif number == 8:
+
     print("VIII")
 
-elif num == 9:
+elif number == 9:
+
     print("IX")
 
-elif num == 10:
+elif number == 10:
+
     print("X")
 
 else:
