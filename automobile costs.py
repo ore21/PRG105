@@ -14,7 +14,7 @@ maintenance = float(input("Enter a monthly maintenance cost: $"))
 
 def sum_costs(loan_payment,insurance,gas,tires,maintenance):
 
-    total = loan_payment + insurance + gas + tires + maintenance
+    total = (loan_payment + insurance + gas + tires + maintenance)
 
     print("total average per month:")
     print(total)
@@ -25,7 +25,7 @@ sum_costs(loan_payment, insurance, gas, tires, maintenance)
 
 def sum_per_year(loan_payment, insurance, gas, tires, maintenance):
 
-    total = loan_payment + insurance + gas + tires + maintenance * 12
+    total = (loan_payment + insurance + gas + tires + maintenance) * 12
 
     print("total costs per year:")
     print(total)
