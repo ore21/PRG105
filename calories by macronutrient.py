@@ -40,7 +40,6 @@ def calories_for_day(calories_from_fat, calories_from_carbs, calories_from_prote
     print(total)
 
 
-calories_for_day(calories_from_fat, calories_from_carbs, calories_from_proteins)
 
 
 
