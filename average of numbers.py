@@ -1,8 +1,7 @@
 """average of numbers"""
 
 
-def main():
-
+def numbers():
     object_file = open('numbers.txt', 'r')
 
     num_line = object_file.readline()
@@ -17,13 +16,12 @@ def main():
     for num_line in object_file:
         total += int(num_line)
         count += 1
-        print("the total of numbers is :", total, " .2f ")
-        avg = (total / count)
-        print("total of numbers is :", avg, " .2f ")
+        total_of_numbers = str(total) + str(count)
+        print("there were a total of :" + total_of_numbers)
+        avg = int(num_line) / count
+        print("the average of numbers is :" + avg)
 
-        total = object_file.readline(total + count)
-
-    object_file.close()
+        object_file.close()
 
 
-main()
+numbers()
