@@ -2,13 +2,11 @@
 
 
 def main():
-
     total = 0
 
     monthly_list = []
 
     for i in range(12):
-
         rainfall = float(input("Enter the amount of rainfall for this month :"))
 
         monthly_list.append(rainfall)
