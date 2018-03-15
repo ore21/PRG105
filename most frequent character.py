@@ -1,37 +1,34 @@
-"""Most Frequent Character"""
-
-letters = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
-           'W', 'X', 'Y', 'Z')
+"""most frequent character"""
 
 
 def main():
+    letters = ('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
+               'W', 'X', 'Y', 'Z')
+
     letter = input("Enter a string of letters :")
+
     print(len(letter))
+
     frequent_letter = " "
+
     for letter in letters:
-        for item in range(25, len(letters)):
+
+        for item in range(0, 25, len(letter)):
+
             if letter.upper() == letters[item]:
                 frequent_letter += letters[item]
-    print(frequent_letter)
+
+    print(len(frequent_letter))
 
 
-def letter_times(letter):
-    if letter > 2:
-        print("your letter appeared more then once ")
-
-    elif letter <= 2:
-        print("your letter appeared only once ")
-
-    else:
-        print("replace the value")
-
-
-print(letter_times)
-
-def count_letters(letters):
+def count_letters(letter):
     count = 0
-    while
 
+    while count <= len(letter):
+        for letter in letter:
+            if letter == letter[count]:
+                count += 1
+    return count
 
 
 main()
