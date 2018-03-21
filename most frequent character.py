@@ -10,10 +10,10 @@ def main():
     highest = 0
     count = 0
 
-    frequent_letter = " "
+    frequent_letter = ""
 
     for let in letters:
-        print("let : ", let)
+        # print("let : ", let)
 
         for item in letter:
 
@@ -28,17 +28,8 @@ def main():
             frequent_letter = let
         count = 0
 
-    #print("length: ", len(frequent_letter))
     print("Frequent letter: " + frequent_letter)
-    print(count)
-
-#def count_letters(letter):
-    #count = 0
-
-    #while count <= len(letter):
-        #for item in letter:
-            #if item == letter[count]:
-                #print(letter[count])
+    print('the most frequent letter :', highest)
 
 
 main()
