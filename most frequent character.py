@@ -1,4 +1,4 @@
-"""most frequent character"""
+"""Most Frequent Character"""
 
 
 def main():
@@ -7,28 +7,38 @@ def main():
 
     letter = input("Enter a string of letters :")
 
-    print(len(letter))
+    highest = 0
+    count = 0
 
     frequent_letter = " "
 
-    for letter in letters:
+    for let in letters:
+        print("let : ", let)
 
-        for item in range(0, 25, len(letter)):
+        for item in letter:
 
-            if letter.upper() == letters[item]:
-                frequent_letter += letters[item]
-
-    print(len(frequent_letter))
-
-
-def count_letters(letter):
-    count = 0
-
-    while count <= len(letter):
-        for letter in letter:
-            if letter == letter[count]:
+            if item.upper() == let:
                 count += 1
-    return count
+
+        if count == highest:
+            frequent_letter += let + " "
+            highest = count
+        elif count > highest:
+            highest = count
+            frequent_letter = let
+        count = 0
+
+    #print("length: ", len(frequent_letter))
+    print("Frequent letter: " + frequent_letter)
+    print(count)
+
+#def count_letters(letter):
+    #count = 0
+
+    #while count <= len(letter):
+        #for item in letter:
+            #if item == letter[count]:
+                #print(letter[count])
 
 
 main()
