@@ -4,7 +4,7 @@
 def main():
     input_file = open('BoyNames.txt', 'r')
     boy_names = input_file.readlines()
-
+    print(input('Please enter a name of a Boy :'))
     input_file.close()
 
     index = 0
@@ -21,7 +21,7 @@ def main():
 
     input_file = open('GirlNames.txt', 'r')
     girl_names = input_file.readlines()
-
+    print(input('Please enter a name of a Girl :'))
     input_file.close()
 
     index = 0
