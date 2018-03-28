@@ -2,6 +2,12 @@
 
 
 class PersonalInfo:
+    def __init__(self, names, addresses, ages, numbers):
+        self.__names = names
+        self.__addresses = addresses
+        self.__ages = ages
+        self.__numbers = numbers
+
     def set_names(self, name):
         self.__names = name
 
@@ -28,7 +34,7 @@ class PersonalInfo:
 
 
 def main(self):
-    info = PersonalInfo()
+    info = PersonalInfo(self)
 
     info.set_names("Ben")
     info.set_addresses("123 6th St. Melbourne, FL 32904")
