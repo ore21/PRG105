@@ -33,7 +33,7 @@ def main():
             print("You are right!")
             player1 += 1
         else:
-            print("You are wrong")
+            print("You are wrong!")
 
     for query in set_2:
         print("\n")
