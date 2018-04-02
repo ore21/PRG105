@@ -33,41 +33,17 @@ class PersonalInfo:
         return self.__numbers
 
 
-def main(self):
-    info = PersonalInfo(self)
+def main():
+    person1 = PersonalInfo("Ben", "123 6th St. Melbourne, FL 32904", 18, "800 - 576 - 5677")
+    person2 = PersonalInfo("Bill", "71 Pilgrim Avenue Chevy Chase, MD 20815", 20, "745 - 600 - 3454")
+    person3 = PersonalInfo("Jack", "70 Bowman St. South Windsor, CT 06074", 25, "800 - 678 - 4492")
 
-    info.set_names("Ben")
-    info.set_addresses("123 6th St. Melbourne, FL 32904")
-    info.set_ages("18")
-    info.set_numbers("800-576-5677")
-
-    print("Name:"), info.get_names()
-    print("Address:"), info.get_addresses()
-    print("Age:"), info.get_ages()
-    print("Phone Number:"), info.get_numbers()
-    print()
-
-    info.set_names("Bill")
-    info.set_addresses("71 Pilgrim Avenue Chevy Chase, MD 20815")
-    info.set_ages("20")
-    info.set_numbers("745-600-3454")
-
-    print("Name:"), info.get_names()
-    print("Address:"), info.get_addresses()
-    print("Age:"), info.get_ages()
-    print("Phone Number:"), info.get_numbers()
-    print()
-
-    info.set_names("Jack")
-    info.set_addresses("70 Bowman St. South Windsor, CT 06074")
-    info.set_ages("25")
-    info.set_numbers("800-678-4492")
-
-    print("Name:"), info.get_names()
-    print("Address:"), info.get_addresses()
-    print("Age:"), info.get_ages()
-    print("Phone Number:"), info.get_numbers()
-    print()
+    print("Name: " + str(person1.get_names() + "\n Address: " + person1.get_addresses() + "\n Age: " + str(person1.get_ages())
+          + "\n Phone Number: " + str(person1.get_numbers())))
+    print("Name: " + str(person2.get_names() + "\n Address: " + person2.get_addresses() + "\n Age: " + str(person2.get_ages())
+          + "\n Phone Number: " + str(person2.get_numbers())))
+    print("Name: " + str(person3.get_names() + "\n Address: " + person3.get_addresses() + "\n Age: " + str(person3.get_ages())
+          + "\n Phone Number: " + str(person3.get_numbers())))
 
 
 main()
