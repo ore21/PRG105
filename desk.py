@@ -1,15 +1,14 @@
-import officefurniture
+import OfficeFurniture
 
 
 def main():
-    desk = officefurniture.OfficeFurniture("brown desk", 5)
-
+    desk = OfficeFurniture.OfficeFurniture("Walnut", "60 Inches", "24 Inches", "30 inches", "$ 675.00")
+    print("Desk")
     print("material: " + desk.get_material())
     print("length: " + desk.get_length())
     print("height: " + desk.get_height())
     print("width: " + desk.get_width())
-    print("Price: " + "${:0,.2f}".format(desk.get_price()))
-
+    print("Price: " + desk.get_price())
     print(desk)
 
 
