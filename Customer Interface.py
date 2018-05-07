@@ -3,26 +3,28 @@
 import tkinter
 
 
-class Garage:
+class GarageGUI:
     def __init__(self):
-        self.main_window = tkinter.Tk
-        self.main_window.title('Garage Menu')
-        self.main_window.geometry('400 * 400')
+        self.main_window = tkinter.Tk()
+        self.main_window.title("Shop Menu")
+        self.main_window.geometry('400x400')
 
         self.top_frame = tkinter.Frame(self.main_window)
         self.bottom_frame = tkinter.Frame(self.main_window)
+        self.answer_frame = tkinter.Frame(self.main_window)
 
         self.radio_var = tkinter.IntVar()
         self.radio_var.set(1)
 
-        # choose item to look for
+        # choose item to look for top_frame
         self.inst1 = tkinter.Label(self.top_frame, text='Enter an item you want to look for: ')
-        self.shirts = tkinter.Radiobutton(self.top_frame, text='Shirts ($10)',variable=self.radio_var, value=1)
-        self.jeans = tkinter.Radiobutton(self.top_frame, text='Jeans ($15)',variable=self.radio_var, value=2)
+
+        self.shirts = tkinter.Radiobutton(self.top_frame, text='Shirts ($10)', variable=self.radio_var, value=1)
+        self.jeans = tkinter.Radiobutton(self.top_frame, text='Jeans ($15)', variable=self.radio_var, value=2)
         self.hats = tkinter.Radiobutton(self.top_frame, text='Hats ($5)', variable=self.radio_var, value=3)
         self.shoes = tkinter.Radiobutton(self.top_frame, text='Shoes ($25)', variable=self.radio_var, value=4)
 
-        # choose color options for the items
+        # choose color options for the items bottom_frame
         self.inst2 = tkinter.Label(self.top_frame, text='Choose any color options: ')
 
         self.red_var = tkinter.IntVar()
@@ -44,6 +46,7 @@ class Garage:
         self.gray_var = tkinter.IntVar()
         self.gray_var.set(0)
         self.gray = tkinter.Checkbutton(self.top_frame, text='Gray ($10)', variable=self.gray_var)
+
         # pack the items and color  buttons
         self.inst1.pack()
         self.shirts.pack(anchor='w', padx=20)
@@ -74,17 +77,22 @@ class Garage:
         self.top_frame.pack()
         self.bottom_frame.pack()
 
+        tkinter.mainloop()
+
     def calc_menu(self):
         order_total = 0
         if self.radio_var.get() == 1:
-            #item_cost_1 = 3
-        order_total = 3
-
-        elif self.radio_var.get() == 2: or self.radio_var.get() == 3:
-            #item_cost_1 = 4
-        order_total = 4
+        # item_cost_1 = 3
+            order_total = 1
+        elif self.radio_var.get() == 2:
+        # item_cost_1 = 4
+            order_total = 4
+        elif self.radio_var.get() == 3:
+            order_total = 4
         elif self.radio_var.get() == 4:
-        # item_cost_1 = 2
-        order_total = 2
+            order_total = 2
 
+        self.items = format(items, '.2f')
+        self.value.set(items)
 
+garagegui = GarageGUI()
