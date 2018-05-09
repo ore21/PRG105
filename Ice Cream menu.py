@@ -1,6 +1,6 @@
 """Ice Cream Menu"""
 import tkinter
-
+import pickle
 
 class IceCreamGUI:
     def __init__(self):
@@ -11,6 +11,13 @@ class IceCreamGUI:
         self.bottom_frame = tkinter.Frame(self.main_window)
         self.radio_var = tkinter.IntVar()
         self.radio_var.set(1)
+
+        #image of an icream
+        root = tkinter.Tk()
+        photo = PhotoImage(file='IceCream.png')
+        label = label(root, image=photo)
+        label.pack()
+
 
         # choose a type  of ice cream
 
@@ -107,7 +114,18 @@ class IceCreamGUI:
 
             tkinter.mainloop()
         # send order total
-        self.cost_button.set('Order Total: ${}'.format(order_total))
+        self.cost_button.set('Total: ${}'.format(order_total))
+
+
+def main():
+    try:
+        input_file = open("IceCream_file.dat", 'rb')
+        ice_cream = pickle.load(input_file)
+
+    except (FileNotFoundError, IOError):
+
+        ice_cream = {}
+
 
 
 ice_cream_gui = IceCreamGUI()
